@@ -54,7 +54,7 @@ func main() {
 	fmt.Println(t(0))              // Outputs: 1
 	fmt.Println(t(1))              // Outputs: hello
 	fmt.Println(t(4).(*temp).Name) // Outputs: bob
-	// fmt.Println(t(2)) // Panics with index out of range error
+	// fmt.Println(t(20000))          // Panics with index out of range error
 	// could use recover() depending on situation
 
 	// t[0] = 99 -> Compile error! Cannot overwrite the data.
