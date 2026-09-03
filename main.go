@@ -10,6 +10,9 @@ type temp struct {
 	Age  int8
 }
 
+// The tuple is immutable because values are captured in the closure
+// and cannot be reassigned
+
 type tuple func(index int) any
 
 func newTuple(values ...any) tuple {
@@ -56,8 +59,6 @@ func main() {
 	fmt.Println(t(4).(*temp).Name) // Outputs: bob
 	// fmt.Println(t(20000))          // Panics with index out of range error
 	// could use recover() depending on situation
-
-	// t[0] = 99 -> Compile error! Cannot overwrite the data.
 
 	stuff := make([]any, 10)
 	fmt.Printf("### capacity of stuff: %d\n", cap(stuff))
