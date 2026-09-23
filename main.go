@@ -7,7 +7,7 @@ import (
 
 type temp struct {
 	Name string
-	Age  int8
+	Age  uint8
 }
 
 // The tuple is immutable because values are captured in the closure
